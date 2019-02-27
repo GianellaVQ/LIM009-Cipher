@@ -6,15 +6,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="encode">
+    <div class="div-welcome" id="div-welcome">
+      <h1>Bienvenido a BancaPass</h1>
+      <p>¿Tienes problemas para tener una contraseña segura?</p>
+      <p>Nosotros nos encargamos de tu seguridad bancaria con contraseñas seguras con la modalidad del cifrado Cesar.</p>
+      <form action="" class="election" id="form-election">
+        <button type="button" id="btn-encode" class="btn" onclick="election(1)">CIFRAR</button>
+        <button type="button" id="btn-decode" class="btn" onclick="election(2)">DESCIFRAR</button>
+      </form>
+    </div>
+    <div id="div-encode" class="div-encode">
       <h1>Cifrado</h1>
       <form action="" id="form-encode">
         <p>Ingresa la clave que deseas cifrar</p>
         <input type="text" id="pass">
         <p>Ingresa la cantidad de desplazamiento</p>
         <input type="text" id="offset">
-        <input type="submit" value="Cifrar">
-        <div id="result">
+        <input type="submit" class="btn" value="Cifrar">
+        <div id="result-encode">
+          
+        </div>
+      </form>
+    </div>
+    <div id="div-decode" class="div-decode">
+      <h1>Descifrado</h1>
+      <form action="" id="form-decode">
+        <p>Ingresa la clave que deseas cifrar</p>
+        <input type="text" id="pass">
+        <p>Ingresa la cantidad de desplazamiento</p>
+        <input type="text" id="offset">
+        <input type="submit" class="btn" value="Decifrar">
+        <div id="result-decode">
           
         </div>
       </form>
