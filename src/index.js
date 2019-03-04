@@ -1,35 +1,48 @@
 let divWelcome = document.getElementById('div-welcome'),
-formElection = document.getElementById('form-election'),
 divEncode = document.getElementById('div-encode'),
 divDecode = document.getElementById('div-decode'),
-encode = document.getElementById('btn-encode'),
-decode = document.getElementById('btn-decode'),
 formEncode = document.getElementById('form-encode'),
 formDecode = document.getElementById('form-decode'),
-pass = document.getElementById('pass'),
-offset = document.getElementById('offset'),
-resultEncode = document.getElementById('result-encode'),
-resultDecode = document.getElementById('result-decode');
+passEn = document.getElementById('passEn'),
+offsetEn = document.getElementById('offsetEn'),
+passDe = document.getElementById('passDe'),
+offsetDe = document.getElementById('offsetDe'),
+btnEncode = document.getElementById('btn-encode'),
+btnDecode = document.getElementById('btn-decode'),
+resultDecode = document.getElementById('result-decode'),
+resultEncode  = document.getElementById('result-encode')
 
-const election = election => {
+btnDecode.addEventListener('click', e => {
+    e.preventDefault()
+    // election(e.target.value)
+    // console.log("asdasd")
     divWelcome.style.display='none'
-    if (election == 1) {
-        divEncode.style.display='block'
-    } else {
-        divDecode.style.display='block'
-    }
-}
+    divDecode.style.display='block'
+});
+
+btnEncode.addEventListener('click', e => {
+    e.preventDefault()
+    // console.log("asdasd")
+    // election(e.target.value)
+    divEncode.style.display='block'
+    divWelcome.style.display='none'
+});
 
 formEncode.addEventListener('submit', e =>{
     e.preventDefault();
-    pass = e.target.pass.value;
-    offset = parseInt(e.target.offset.value);
-    cipher.encode(pass, offset)
-});
+    passEn = e.target.passEn.value;
+    offsetEn = parseInt(e.target.offsetEn.value);
+    let result = cipher.encode(passEn, offsetEn);
+    resultEncode.textContent = result;
+}
+);
 
 formDecode.addEventListener('submit', e=>{
     e.preventDefault();
-    pass = e.target.pass.value;
-    offset = parseInt(e.target.offset.value);
-    cipher.decode(pass, offset)
+    passDe = e.target.passDe.value;
+    offsetDe = parseInt(e.target.offsetDe.value);
+    let result = cipher.decode(passDe, offsetDe);
+    resultDecode.textContent = result;
 });
+ 
+

@@ -1,26 +1,24 @@
 window.cipher = {
-  encode: (pass, offset) => {
-    let newPass = '';
-    for (let i = 0; i < pass.length; i++) {
-      let numAsci = pass[i].charCodeAt();
-      let numRecorrido = (((numAsci - 65) + offset) % 26 + 65);
+  encode: (passEn, offsetEn) => {
+    let newPassEncode = '';
+    for (let i = 0; i < passEn.length; i++) {
+      let numAsci = passEn[i].charCodeAt();
+      let numRecorrido = (((numAsci - 65) + offsetEn) % 26 + 65 ); 
       let letterAsci = String.fromCharCode(numRecorrido);
-      newPass += letterAsci;
-      resultEncode.textContent = newPass;
-      // console.log(newPass); 
+      newPassEncode += letterAsci;
     }
-    return newPass;
+    return newPassEncode;
   },
-  decode: (pass,offset) => {
-    let newPass = '';
-    for (let i = 0; i < pass.length; i++) {
-      let numAsci = pass[i].charCodeAt();
-      let numRecorrido = (((numAsci - 65) - offset + 26)% 26 + 65);
+
+  decode: (passDe,offsetDe) => {
+    let newPassDecode = '';
+    for (let i = 0; i < passDe.length; i++) {
+      let numAsci = passDe[i].charCodeAt();
+      let numRecorrido = (((numAsci - 65) - offsetDe)%26 );
+      numRecorrido = numRecorrido < 0 ? (numRecorrido + 90)+1 : numRecorrido +65
       let letterAsci = String.fromCharCode(numRecorrido);
-      newPass += letterAsci;
-      resultDecode.textContent = newPass;
-      // console.log(newPass); 
+      newPassDecode += letterAsci;   
   }
-  return newPass;
-},
+  return newPassDecode;
 }
+};
