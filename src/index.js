@@ -41,13 +41,13 @@ formDecode.addEventListener('submit', e=>{
     resultDecode.textContent = result;
 });
 
-// document.getElementById('passEn').addEventListener('keypress', e =>{
-//     if (e.charCode < 65 || e.charCode > 90) return e.preventDefault() 
+document.getElementById('passEn').addEventListener('keypress', e =>{
+    if (e.charCode < 65 || e.charCode > 90) return e.preventDefault() 
     
-// });
+});
 
-// document.getElementById('passDe').addEventListener('keypress', e =>{
-//     if (e.charCode < 65 || e.charCode > 90) return e.preventDefault() 
+document.getElementById('passDe').addEventListener('keypress', e =>{
+    if (e.charCode < 65 || e.charCode > 90) return e.preventDefault() 
     
-// });
+});
  
