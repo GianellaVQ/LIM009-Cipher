@@ -7,10 +7,10 @@
   </head>
   <body>
     <div class="div-welcome" id="div-welcome">
-      <h1>Bienvenido a BancaPass</h1>
+      <h1>Bienvenido a TarjetaPass</h1>
       <p>¿Tienes problemas para tener una contraseña segura?</p>
       <p>Nosotros nos encargamos de tu seguridad bancaria con contraseñas seguras con la modalidad del cifrado Cesar.</p>
-      <form action="" class="election" id="form-election">
+      <form action="" id="form-election">
         <button type="button" id="btn-encode" class="btn"  value="1" >CIFRAR</button>
         <button type="button" id="btn-decode" class="btn"  value="2" >DESCIFRAR</button>
       </form>
@@ -21,11 +21,14 @@
         <p>Ingresa la clave que deseas cifrar</p>
         <input type="text" id="passEn">
         <p>Ingresa la cantidad de desplazamiento</p>
-        <input type="text" id="offsetEn">
+        <input type="number" id="offsetEn">
         <input type="submit" class="btn" value="Cifrar">
-        <div id="result-encode">
+        <input type="reset" class="btn" value="Limpiar">
+        <p><b>Resultado</b> </p>
+        <div id="result-encode" class="result">
           
         </div>
+        <a href="index.html"><img src="../img/return.png" alt="Botón"></a>
       </form>
     </div>
     <div id="div-decode" class="div-decode">
@@ -34,12 +37,16 @@
         <p>Ingresa la clave que deseas cifrar</p>
         <input type="text" id="passDe">
         <p>Ingresa la cantidad de desplazamiento</p>
-        <input type="text" id="offsetDe">
+        <input type="number" id="offsetDe">
         <input type="submit" class="btn" value="Decifrar">
-        <div id="result-decode">
+        <input type="reset" class="btn" value="Limpiar">       
+        <p><b>Resultado</b> </p>
+        <div id="result-decode" class="result">
           
         </div>
-      </form>
+        <a href="index.html"><img src="../img/return.png" alt="Botón"></a>
+      </form>  
+
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

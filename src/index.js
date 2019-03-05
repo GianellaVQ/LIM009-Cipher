@@ -10,20 +10,16 @@ offsetDe = document.getElementById('offsetDe'),
 btnEncode = document.getElementById('btn-encode'),
 btnDecode = document.getElementById('btn-decode'),
 resultDecode = document.getElementById('result-decode'),
-resultEncode  = document.getElementById('result-encode')
+resultEncode  = document.getElementById('result-encode');
 
 btnDecode.addEventListener('click', e => {
     e.preventDefault()
-    // election(e.target.value)
-    // console.log("asdasd")
     divWelcome.style.display='none'
     divDecode.style.display='block'
 });
 
 btnEncode.addEventListener('click', e => {
     e.preventDefault()
-    // console.log("asdasd")
-    // election(e.target.value)
     divEncode.style.display='block'
     divWelcome.style.display='none'
 });
@@ -44,5 +40,3 @@ formDecode.addEventListener('submit', e=>{
     let result = cipher.decode(passDe, offsetDe);
     resultDecode.textContent = result;
 });
- 
-
