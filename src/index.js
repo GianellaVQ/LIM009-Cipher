@@ -40,3 +40,14 @@ formDecode.addEventListener('submit', e=>{
     let result = cipher.decode(passDe, offsetDe);
     resultDecode.textContent = result;
 });
+
+document.getElementById('passEn').addEventListener('keypress', e =>{
+    if (e.charCode < 65 || e.charCode > 90) return e.preventDefault() 
+    
+});
+
+document.getElementById('passDe').addEventListener('keypress', e =>{
+    if (e.charCode < 65 || e.charCode > 90) return e.preventDefault() 
+    
+});
+ 

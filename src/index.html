@@ -19,7 +19,7 @@
       <h1>Cifrado</h1>
       <form action="" id="form-encode">
         <p>Ingresa la clave que deseas cifrar</p>
-        <input type="text" id="passEn">
+        <input type="text" id="passEn" name="letras" required pattern="[A-Z]" max="10">
         <p>Ingresa la cantidad de desplazamiento</p>
         <input type="number" id="offsetEn">
         <input type="submit" class="btn" value="Cifrar">
